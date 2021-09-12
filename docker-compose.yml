@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+    test:
+      network_mode: host
+      image: crawler/robotframework
+      shm_size: "256M"
+      environment:
+          USERNAME: salsabilarahma
+      volumes: [
+        "./Suites:/Suites",
+        "./Scripts:/Scripts",
+        "./Reports:/Reports"
+      ]
